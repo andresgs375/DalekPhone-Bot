@@ -1,4 +1,4 @@
 DalekPhone-Bot
 ==============
 
-Códiga base para el DalekPhone-Bot
+Código base para el DalekPhone-Bot
