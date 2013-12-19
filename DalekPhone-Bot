@@ -39,28 +39,18 @@ Dalek6.write(centralPos);
 Serial.begin(9600); // por si es necesario usar el monitor serial
 }
 void loop(){
- 
-  note(7,0); //función note(nota, duración) como la función duración me está definida lleva valor 0
-  delay(200);//duración una nota negra
-  note(7,0);
-  delay(200);
-  note(7,0);
-  delay(400);//duración una nota blanca, el doble de un negra
-  note(7,0);
-  delay(200);
-  note(7,0);
-  delay(200);
-  note(7,0);
-  delay(400);
-  note(7,0);
-  delay(200);
-  note(9,0);
-  delay(200);
-  note(5,0);
-  delay(400);
-  note(6,0);
-  delay(200);
-  note(7,0);
+ //test para un solo servo conectado al pin3
+  note(1,200); //función note(nota, duración) 
+  note(1,200);
+  note(1,200);
+  note(2,400);
+  note(2,400);
+  note(1,200);
+  note(1,1000);
+  note(2,200);
+  note(2,200);
+  note(2,400);
+  note(2,400);
   delay(3000);
   
 }
@@ -72,61 +62,73 @@ void note(int pitch, int time) //función de las notas (pitch es la variable de 
       Dalek1.write(leftPos);   //dalek1 golpea nota a la izquierda
       delay(150);              // retardo para que el servo llegue a golpear
       Dalek1.write(centralPos);//dalek1 vuelve al centro
+      delay(time);             //duración de la nota
       break;
      case 2:
       Dalek1.write(rightPos);  //dalek1 golpea nota a la derecha
       delay(150);              // retardo para que el servo llegue a golpear
       Dalek1.write(centralPos);//dalek1 vuelve al centro
+      delay(time);             //duración de la nota
       break;
      case 3:
       Dalek2.write(leftPos);
       delay(150);
       Dalek2.write(centralPos);
+      delay(time);
       break;
      case 4:
       Dalek2.write(rightPos);
       delay(150);
       Dalek2.write(centralPos);
+      delay(time);
       break;
      case 5:
       Dalek3.write(leftPos);
       delay(150);
       Dalek3.write(centralPos);
+      delay(time);
       break;
      case 6:
       Dalek3.write(rightPos);
       delay(150);
       Dalek3.write(centralPos);
+      delay(time);
       break;
      case 7:
       Dalek4.write(leftPos);
       delay(150);
       Dalek4.write(centralPos);
+      delay(time);
       break;
      case 8:
       Dalek4.write(rightPos);
       delay(150);
       Dalek4.write(centralPos);
+      delay(time);
       break;
      case 9:
       Dalek5.write(leftPos);
       delay(150);
       Dalek5.write(centralPos);
+      delay(time);
       break;
      case 10:
       Dalek5.write(rightPos);
       delay(150);
       Dalek5.write(centralPos);
+      delay(time);
       break;
      case 11:
       Dalek6.write(leftPos);
       delay(150);
       Dalek6.write(centralPos);
+      delay(time);
       break;
      case 12:
       Dalek6.write(rightPos);
       delay(150);
       Dalek6.write(centralPos);
+      delay(time);
       break;  
     default: 
       Dalek1.write(centralPos);
